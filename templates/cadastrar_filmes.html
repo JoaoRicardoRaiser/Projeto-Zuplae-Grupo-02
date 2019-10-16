@@ -1,0 +1,18 @@
+{% extends "index.html" %}
+
+{% block index %}
+
+    <h1>filmes</h1>
+    <div class= "formulario">
+        <form action="/filmes" method="POST"> 
+            <input type="hidden" name="id" >
+            <input class="input" type="text" placeholder="titulo" name="titulo"> 
+            <input class="input" type="text" placeholder="ano" name="ano" >
+            <input class="input" type="text" placeholder="valor" name="valor">
+            <input type="submit" value="cadastrar" {}>        
+        </form>
+
+    </div>
+   
+
+{% endblock %}

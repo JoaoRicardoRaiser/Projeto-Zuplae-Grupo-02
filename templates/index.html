@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<head>
+
+    <title>{{nome_pagina}}</title>
+    
+</head>
+
+<body>
+    <div class='cabecalho'>
+        <div class = "logo"> 
+            <a href="/">{{nome_pagina}}</a>
+        </div>
+        <div class= "menu">
+            <ul>
+                <li>
+                    <a href="/clientes">Clientes</a>
+                </li>
+                <li>
+                    <a href="/filmes">Filmes</a>
+                </li>
+                <li>
+                    <a href="/locacoes">Locações</a>
+                </li>
+                                   
+            </ul>    
+        </div>
+
+    </div>
+    {% block index %}
+
+    {% endblock %}
+</body>
+
+</html>
