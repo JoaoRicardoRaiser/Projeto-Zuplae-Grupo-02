@@ -1,0 +1,32 @@
+{% extends "index.html" %}
+{% block index %}
+<table>
+
+    <thead>
+        
+        <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Telefone</th>
+            <th>CPF</th>
+            <a href="/clientes/cadastro"> <button> cadastrar cliente</button></a>
+            
+        </tr>
+    </thead>
+    <tbody>
+        {% for i in lista %}
+        <tr>
+            <td>{{i.id}}</td>
+            <td>{{i.nome}}</td>
+            <td>{{i.telefone}}</td>
+            <td>{{i.cpf}}</td>                   
+        </tr>
+        {% endfor %}
+    </tbody>
+
+
+</table>
+
+
+
+{% endblock %}

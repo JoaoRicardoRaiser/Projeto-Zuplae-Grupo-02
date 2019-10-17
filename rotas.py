@@ -17,11 +17,25 @@ def listar_filmes_db():  ############ MÉTODO PARA LISTAR OS DADOS JÁ CONTIDOS 
         filmes.ano = i[2]
         filmes.valor = i[3]
         listar_filmes.append(filmes)
-
     conexao.close()
     return listar_filmes
 
+def listar_clientes_db():  ############ MÉTODO PARA LISTAR OS DADOS DE CLIENTES JÁ CONTIDOS NA TABELA DO BD)
+    conexao = MySQLdb.connect(host="mysql.zuplae.com", user="zuplae07", passwd="grupo02", database="zuplae07")
+    cursor = conexao.cursor()
+    cursor.execute("select * from CLIENTE") 
+    listar_clientes = []
+    for i in cursor.fetchall():
+        clientes  = Clientes()
+        clientes.id = i[0]
+        clientes.nome = i[1]
+        clientes.telefone = i[2]
+        clientes.cpf = i[3]
+        listar_clientes.append(clientes)
+    conexao.close()
+    return listar_clientes
 
+############ MÉTODO PARA SALVAR FILMES NO BD ##############  
 def salvar_filmes_db(titulo, ano, valor):
     conexao = MySQLdb.connect(host="mysql.zuplae.com", user="zuplae07", passwd="grupo02", database="zuplae07")
     cursor = conexao.cursor()
@@ -29,6 +43,15 @@ def salvar_filmes_db(titulo, ano, valor):
     " VALUES ('{}', '{}', '{}')".format(titulo,ano,valor))
     conexao.commit()
     conexao.close()
+ ############ MÉTODO PARA SALVAR CLIENTE NO BD ##############   
+def salvar_clientes_db(nome, telefone, cpf):
+    conexao = MySQLdb.connect(host="mysql.zuplae.com", user="zuplae07", passwd="grupo02", database="zuplae07")
+    cursor = conexao.cursor()
+    cursor.execute("INSERT INTO CLIENTE (NOME,TELEFONE,CPF)" + 
+    " VALUES ('{}', '{}', '{}')".format(nome,telefone,cpf))
+    conexao.commit()
+    conexao.close()
+
 
 
 
@@ -46,12 +69,14 @@ def inicio():
 ##### rota onde estão os filmes listados
 @app.route('/filmes')
 def filmes():
-    return render_template ('lista_filmes.html')
+    lista_filmes = listar_filmes_db()
+    return render_template ('lista_filmes.html', lista = lista_filmes)
 ######
 
 @app.route('/clientes') 
 def clientes():
-    return render_template('clientes.html', nome_pagina = locadora)
+    lista_clientes = listar_clientes_db()
+    return render_template('lista_cliente.html', nome_pagina = locadora, lista = lista_clientes)
 
 @app.route('/filmes/cadastro')
 def filmes_cadastro():
@@ -69,7 +94,33 @@ def salvar():
     salvar_filmes_db(filme.titulo, filme.ano, filme.valor)
     return redirect('/filmes')
 
+########### Rota de Salvar Cliente no BD ############
+@app.route('/clientes/salvar', methods = ["POST"])
+def salvar_clientes():
+    nome = request.form['nome']
+    telefone = request.form['telefone']
+    cpf = request.form['cpf']
+    cliente= Clientes()
+    cliente.nome = nome 
+    cliente.telefone = telefone 
+    cliente.cpf = cpf
+    salvar_clientes_db(cliente.nome, cliente.telefone, cliente.cpf)
+    return redirect('/clientes')
 
+@app.route('/clientes/cadastro')
+def cliente_cadastro():
+    return render_template('cadastrar_clientes.html')
+
+
+@app.route('/locacoes')
+def locacoes():
+    return render_template('lista_locacoes.html')
+
+@app.route('/locar/filme')
+def locar_filme():
+    listar_nomes = listar_clientes_db()
+    listar_titulos = listar_filmes_db()
+    return render_template('cadastrar_locacao.html', lista = listar_nomes, lista2 = listar_titulos)
 
 app.run(debug=True)
 

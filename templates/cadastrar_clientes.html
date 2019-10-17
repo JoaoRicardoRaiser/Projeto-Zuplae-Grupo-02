@@ -2,7 +2,7 @@
 
 {% block index %}
 
-<form>
+<form action="/clientes/salvar" method="POST">
     Nome Completo:<br>
     <input type="text" name="nome">
     <br>
@@ -10,9 +10,18 @@
     <input type="text" name="telefone">
     <br>
     CPF:<br>
-    <input type="text" name="CPF">
+    <input type="text" name="cpf">
     <br>
+    <input type="submit" value="salvar">
 </form>
+<!-- 
+<form action="/filmes/salvar" method="POST"> 
+    <input type="hidden" name="id" >
+    <input class="input" type="text" placeholder="titulo" name="titulo"> 
+    <input class="input" type="text" placeholder="ano" name="ano" >
+    <input class="input" type="text" placeholder="valor" name="valor">
+    <input type="submit" value="cadastrar" {}>        
+</form> -->
 
 
 {% endblock %}
