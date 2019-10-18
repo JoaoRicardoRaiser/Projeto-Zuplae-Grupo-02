@@ -1,42 +1,50 @@
 {% extends "index.html" %}
 {% block index %}
+
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-<div class="dropdown">
-    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
-        aria-haspopup="true" aria-expanded="false">
-        Lista Filmes
-    </button>
-    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-        {% for i in lista2 %}
-        <a class="dropdown-item">{{i.titulo}}</a>
-        {% endfor %}
+
+
+
+
+<html>
+
+<head>
+    <title>Bootstrap Example</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div class="dropdown">
+        <button type="button" class="btn btn-outline-dark" data-toggle="dropdown">
+            Lista de Filmes
+        </button>
+        <div class="dropdown-menu">
+            {% for i in lista2 %}
+            <a class="dropdown-item" href=>{{i.titulo}}</a>
+            {% endfor %}
+        </div>
+    </div>
     </div>
     <hr>
-</div>
+    </style>
 
-
-<div class="dropdown2">
-    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
-        aria-haspopup="true" aria-expanded="false">
-        Lista Clientes
-    </button>
-    <div class="dropdown-menu2" aria-labelledby="dropdownMenuButton2">
-        {% for i in lista %}
-        <a class="dropdown-item">{{i.nome}}</a>
-        {% endfor %}
+    <div class="dropdown">
+        <button type="button" class="btn btn-outline-dark" data-toggle="dropdown">
+            Lista de Clientes
+        </button>
+        <div class="dropdown-menu">
+            {% for i in lista %}
+            <a class="dropdown-item" href=>{{i.nome}}</a>
+            {% endfor %}
+        </div>
     </div>
-</div>
-<div class="dropdown show">
-    <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown"
-        aria-haspopup="true" aria-expanded="false">
-        Dropdown link
-    </a>
-
-    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-        <a class="dropdown-item" href="#">Action</a>
-        <a class="dropdown-item" href="#">Another action</a>
-        <a class="dropdown-item" href="#">Something else here</a>
     </div>
-</div>
+</body>
+</html>
+
 {% endblock %}

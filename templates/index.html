@@ -1,32 +1,27 @@
-<!DOCTYPE html>
+<html>
 
 <head>
 
     <title>{{nome_pagina}}</title>
-    
+
 </head>
+<nav>
+
+    <a class="navbar-brand">
+        <img src="../static/hd-filmes-logo-4F7B194314-seeklogo.com.png" alt="logo" style="width:10em;">
+    </a>
+
+    <nav aria-label="navbar-brand">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/clientes">Clientes</a></li>
+            <li class="breadcrumb-item"><a href="/filmes">Filmes</a></li>
+            <li class="breadcrumb-item"><a href="/locacoes">Locações</a></li>
+        </ol>
+    </nav>
+</nav>
 
 <body>
-    <div class='cabecalho'>
-        <div class = "logo"> 
-            <a href="/">{{nome_pagina}}</a>
-        </div>
-        <div class= "menu">
-            <ul>
-                <li>
-                    <a href="/clientes">Clientes</a>
-                </li>
-                <li>
-                    <a href="/filmes">Filmes</a>
-                </li>
-                <li>
-                    <a href="/locacoes">Locações</a>
-                </li>
-                                   
-            </ul>    
-        </div>
 
-    </div>
     {% block index %}
 
     {% endblock %}
