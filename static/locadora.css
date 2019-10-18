@@ -1,5 +1,6 @@
-.home{
-    background: rgb(41, 40, 40);
-    height: 100%;
-    width: 100%;
+body{
+    background: rgb(248, 235, 113);
+}
+.teste{
+    float: right;
 }
