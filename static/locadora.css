@@ -1,6 +1,9 @@
-body{
-    background: rgb(248, 235, 113);
+
+.jumbotron{
+    margin: 0%;
+    background: rgb(20, 20, 20);
+    color: rgb(248, 245, 245);
+    text-align:center; 
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;   
 }
-.teste{
-    float: right;
-}
+

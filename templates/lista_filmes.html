@@ -10,20 +10,20 @@
             <th>Titulo</th>
             <th>Ano</th>
             <th>Valor</th>
-            <a href="/filmes/cadastro"> <button> cadastrar filme</button></a>
+            <a href="/filmes/cadastro"><button>cadastrar filme</button></a>
         </tr>
-        
+
     </thead>
     <tbody>
         {% for i in lista %}
         <tr>
-                <td>{{i.id}}</td>
-                <td>{{i.titulo}}</td>
-                <td>{{i.ano}}</td>
-                <td>{{i.valor}}</td>                   
-            </tr>
+            <td>{{i.id}}</td>
+            <td>{{i.titulo}}</td>
+            <td>{{i.ano}}</td>
+            <td>{{i.valor}}</td>
+        </tr>
         {% endfor %}
-            </tbody>
+    </tbody>
 </table>
 
 

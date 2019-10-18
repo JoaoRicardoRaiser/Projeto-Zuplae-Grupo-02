@@ -1,8 +1,8 @@
-{% extends "index.html" %}
+{% extends "home.html" %}
 
 {% block index %}
 
-    <h1>filmes</h1>
+    <!-- <h1>filmes</h1>
     <div class= "formulario">
         <form action="/filmes/salvar" method="POST"> 
             <input type="hidden" name="id" >
@@ -12,7 +12,35 @@
             <input type="submit" value="cadastrar" {}>        
         </form>
 
-    </div>
+    </div> -->
+    <head>
+ 
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+          </head>
+          <form action="/filmes/salvar" method="POST">
+            <div class="container">
+                <h2>Cadastro de Filmes</h2>
+                <form action="/action_page.php">
+                    <div class="form-group">
+                        <label for="titulo">Titulo</label>
+                        <input type="titulo" class="form-control" id="titulo" placeholder="Titulo" name="titulo">
+                    </div>
+                    <div class="form-group">
+                        <label for="ano">Ano:</label>
+                        <input type="ano" class="form-control" id="ano" placeholder="Ano" name="ano">
+                    </div>
+                    <div class="form-group">
+                        <label for="valor">Valor:</label>
+                        <input type="valor" class="form-control" id="valor" placeholder="valor" name="valor">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Cadastrar</button>
+                </form>
+            </div>
    
 
 {% endblock %}
