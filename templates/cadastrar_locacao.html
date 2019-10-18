@@ -19,32 +19,38 @@
 </head>
 
 <body>
-    <div class="dropdown">
-        <button type="button" class="btn btn-outline-dark" data-toggle="dropdown">
-            Lista de Filmes
-        </button>
-        <div class="dropdown-menu">
-            {% for i in lista2 %}
-            <a class="dropdown-item" href=>{{i.titulo}}</a>
-            {% endfor %}
-        </div>
-    </div>
-    </div>
-    <hr>
-    </style>
+    <form action="/locacao/salvar" method="POST">
+        <select class="custom-select" name="filmes">
+            <option selected>Filmes</option>
+            <div class="dropdown-menu">
+                {% for i in lista2 %}
+                <option value="titulo">{{i.titulo}}</option>
+                {% endfor %}
+            </div>
+        </select>
 
-    <div class="dropdown">
-        <button type="button" class="btn btn-outline-dark" data-toggle="dropdown">
-            Lista de Clientes
-        </button>
-        <div class="dropdown-menu">
-            {% for i in lista %}
-            <a class="dropdown-item" href=>{{i.nome}}</a>
-            {% endfor %}
+        <hr>
+
+        <select class="custom-select" name="cliente">
+            <option selected>Clientes</option>
+            <div class="dropdown-menu">
+                {% for i in lista %}
+                <option value="titulo">{{i.nome}}</option>
+                {% endfor %}
+            </div>
+        </select>
+        <hr>
+
+        <div class="form-group">
+            <input type="datetime" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                placeholder="Data da Locação" name="data_locacao">
         </div>
-    </div>
-    </div>
+        <input type="submit" value="Realizar Locação" {}>
+
+    </form>
+
 </body>
+
 </html>
 
 {% endblock %}
