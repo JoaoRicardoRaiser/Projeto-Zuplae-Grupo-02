@@ -1,12 +1,9 @@
 {% extends "index.html" %}
 {% block index %}
 
-<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> -->
-<table>
+<table class="table table-dark table-hover">
 
     <thead>
-        <tr>
             <th>Cliente</th>
             <th>Filme</th>
             <th>Valor</th>
@@ -20,12 +17,8 @@
             <td>{{i.id_filme}}</td>
             <td>{{i.valor}}</td>
             <td>{{i.data_locacao}}</td>
-        </tr>
         {% endfor %}
     </tbody>
-
-    </tr>
-    <hr>
 </table>
 
 {% endblock %}

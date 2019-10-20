@@ -139,10 +139,10 @@ def salvar_locacao():
     cliente = request.form['cliente']
     data_locacao = request.form['data_locacao']
     locacao= Locacao()
-    locacao.id_filmes = filmes
-    locacao.id_cliente = cliente
-    locacao.data_locacao = data_locacao
-    salvar_locacao_db(locacao.id_filmes, locacao.id_cliente, locacao.data_locacao)
+    locacao.ID_FILME = filmes
+    locacao.ID_CLIENTE = cliente
+    locacao.DATA_LOCACAO = data_locacao
+    salvar_locacao_db(locacao.ID_CLIENTE, locacao.ID_FILME, locacao.DATA_LOCACAO)
     return redirect('/locacoes')
 
 
@@ -166,7 +166,7 @@ def locar_filme():
     listar_titulos = listar_filmes_db()
     return render_template('cadastrar_locacao.html', lista = listar_nomes, lista2 = listar_titulos)
 
-app.run()
+app.run(debug= True)
 
 
 
