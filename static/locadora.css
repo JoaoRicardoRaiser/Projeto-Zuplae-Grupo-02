@@ -1,9 +1,71 @@
 
 .jumbotron{
     margin: 0%;
-    background: rgb(20, 20, 20);
+    background: #363434;
     color: rgb(248, 245, 245);
     text-align:center; 
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;   
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    height: 150px;   
+}
+.logo img{
+    width: 150px;
+    float: left;
+    margin: -2em -1em   
+}
+.jumbotron h1{
+    margin: -1em
+}
+body{
+    margin: 0;
+    background: #c5c2c2
+}
+.menu{
+    width: 70em;
+    margin: 2em;
+}
+.menu ul li{
+    background: cornsilk;
+    display: inline-block;
+    text-transform: uppercase;
+    padding: 0.3em 2em;
+}
+.locar{
+    width: 80%;
+    margin: 0.5em 0 0 7em;
 }
 
+.menu li:hover{
+  background: #000000;
+  text-decoration: none;
+  color: #ffffff;
+}
+#tabela_filmes{
+    width: 80%;
+    margin: 2em 0 0 9em;
+}
+#botao_cadfilme{
+    margin: 0 0 10em 37em;
+}
+#linha_filmes{
+    background: #dad6d6;
+}
+#tabela_clientes{
+    width: 80%;
+    margin: 2em 0 0 9em;
+}
+#linha_clientes{
+    background: #dad6d6;
+}
+#botao_cadclientes{
+    margin: 0 0 10em 37em;
+}
+#tabela_locacoes{
+    width: 80%;
+    margin: 2em 0 0 9em;
+}
+#botao_cadlocacao{
+    margin: 0 0 10em 37em;
+}
+#linha_locacao{
+    background: #dad6d6; 
+}
