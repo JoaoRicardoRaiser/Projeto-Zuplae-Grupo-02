@@ -19,7 +19,7 @@
             <option selected>Filmes</option>
             <div class="dropdown-menu">
                 {% for i in lista2 %}
-                <option value="titulo">{{i.titulo}}</option>
+                <option value="{{i.id}}">{{i.titulo}}</option>
                 {% endfor %}
             </div>
         </select>
@@ -30,7 +30,7 @@
             <option selected>Clientes</option>
             <div class="dropdown-menu">
                 {% for i in lista %}
-                <option value="titulo">{{i.nome}}</option>
+                <option value="{{i.id}}">{{i.nome}}</option>
                 {% endfor %}
             </div>
         </select>

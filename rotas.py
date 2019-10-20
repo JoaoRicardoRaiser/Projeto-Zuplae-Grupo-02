@@ -59,6 +59,8 @@ def salvar_filmes_db(titulo, ano, valor):
     " VALUES ('{}', '{}', '{}')".format(titulo,ano,valor))
     conexao.commit()
     conexao.close()
+
+
  ############ MÉTODO PARA SALVAR CLIENTE NO BD ##############   
 def salvar_clientes_db(nome, telefone, cpf):
     conexao = MySQLdb.connect(host="mysql.zuplae.com", user="zuplae07", passwd="grupo02", database="zuplae07")
@@ -68,6 +70,7 @@ def salvar_clientes_db(nome, telefone, cpf):
     conexao.commit()
     conexao.close()
 
+ ############ MÉTODO PARA SALVAR LOCAÇÕES NO BD ############## 
 def salvar_locacao_db(id_cliente, id_filme, data_locacao):
     conexao = MySQLdb.connect(host="mysql.zuplae.com", user="zuplae07", passwd="grupo02", database="zuplae07")
     cursor = conexao.cursor()
@@ -78,11 +81,10 @@ def salvar_locacao_db(id_cliente, id_filme, data_locacao):
 
 
 
+################################  ROTAS  #################################################
 
 
-
-
-#rotas
+#####  ROTA PAGINA INICIAL  
 locadora = "LOCADORA HBSIS"
 app= Flask(__name__)
 @app.route('/')
@@ -139,7 +141,7 @@ def salvar_locacao():
     cliente = request.form['cliente']
     data_locacao = request.form['data_locacao']
     locacao= Locacao()
-    locacao.id_filmes = filmes
+    locacao.id_filme = filmes
     locacao.id_cliente = cliente
     locacao.data_locacao = data_locacao
     salvar_locacao_db(locacao.id_filmes, locacao.id_cliente, locacao.data_locacao)
