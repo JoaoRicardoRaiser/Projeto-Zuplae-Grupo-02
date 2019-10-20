@@ -1,15 +1,19 @@
 {% extends "index.html" %}
 {% block index %}
 
-<table class="table table-dark table-hover">
+<table id="tabela_locacoes" class="table table-dark table-hover">
 
     <thead>
             <th>Cliente</th>
             <th>Filme</th>
             <th>Valor</th>
             <th>Data de Locação</th>
-            <a href="/locar/filme"><button type="button" class="btn btn-primary">Alugar Filme</button></a>
 
+            <div id="linha_locacao">
+                <hr>    
+            </div>  
+                  
+            <a id="botao_cadlocacao" href="/locar/filme"><button type="button" class="btn btn-primary">Alugar Filme</button></a>
     <tbody>
         {% for i in lista3 %}
         <tr>

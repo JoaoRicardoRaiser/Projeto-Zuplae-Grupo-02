@@ -1,16 +1,18 @@
 {% extends "index.html" %}
 {% block index %}
 
-<table class="table table-dark table-hover">
+<table id="tabela_filmes" class="table table-dark table-hover">
     <thead>
-
-        <tr>
-            <th>ID</th>
-            <th>Titulo</th>
-            <th>Ano</th>
-            <th>Valor</th>
-        </tr>
-            <a href="/filmes/cadastro"><button type="button" class="btn btn-primary">Cadastrar Filme</button></a>
+            <tr>
+                <th>ID</th>
+                <th>Titulo</th>
+                <th>Ano</th>
+                <th>Valor</th>
+            </tr>
+            <div id="linha_filmes">
+                <hr>
+            </div>
+            <a id="botao_cadfilme" href="/filmes/cadastro"><button type="button" class="btn btn-primary">Cadastrar Filme</button></a>
 
     </thead>
     <tbody>
