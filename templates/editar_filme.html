@@ -1,0 +1,19 @@
+{% extends "index.html" %}
+
+{% block index %}
+
+    <h1>Filmes Alterar!</h1>
+    <!-- <a href="/filmes/lista">Listagem</a> -->
+    
+    <div class= "formulario">
+        <form action="/filmes/alterar/salvar" method="POST"> 
+            <input type="hidden" name="id" value="{{filme.id}}">
+            <input class="input" type="text" placeholder="nome" name="titulo" value="{{filme.titulo}}" > 
+            <input class="input" type="text" placeholder="descrição" name="ano" value="{{filme.ano}}">
+            <input class="input" type="text" placeholder="descrição" name="valor" value="{{filme.valor}}">
+            <input type="submit" value="salvar">        
+        </form>
+
+    </div>
+
+{% endblock %}

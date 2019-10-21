@@ -1,0 +1,19 @@
+{% extends "index.html" %}
+
+{% block index %}
+
+    <h1>Clientes Alterar!</h1>
+    <!-- <a href="/filmes/lista">Listagem</a> -->
+    
+    <div class= "formulario">
+        <form action="/clientes/alterar/salvar" method="POST"> 
+            <input type="hidden" name="id" value="{{cliente1.id}}">
+            <input class="input" type="text" placeholder="nome" name="nome" value="{{cliente1.nome}}" > 
+            <input class="input" type="text" placeholder="descrição" name="telefone" value="{{cliente1.telefone}}">
+            <input class="input" type="text" placeholder="descrição" name="cpf" value="{{cliente1.cpf}}">
+            <input type="submit" value="salvar">        
+        </form>
+
+    </div>
+
+{% endblock %}

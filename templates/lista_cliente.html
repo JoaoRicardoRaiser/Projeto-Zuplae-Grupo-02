@@ -20,6 +20,10 @@
             <td>{{i.nome}}</td>
             <td>{{i.telefone}}</td>
             <td>{{i.cpf}}</td>
+            <td>
+                <a href="/cliente/delete?id={{i.id}}">Deletar</a>
+                <a href="/cliente/alterar?id={{i.id}}">Alterar</a>
+            </td>
         </tr>
         {% endfor %}
     </tbody>

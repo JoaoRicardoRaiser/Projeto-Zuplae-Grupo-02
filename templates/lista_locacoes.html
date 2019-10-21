@@ -22,6 +22,9 @@
             <td>{{i.id_filme}}</td>
             <td>{{i.valor}}</td>
             <td>{{i.data_locacao}}</td>
+            <td>
+                <a href="/locacoes/delete?id={{i.id}}">Deletar</a>
+            </td>
         {% endfor %}
     </tbody>
 </table>
