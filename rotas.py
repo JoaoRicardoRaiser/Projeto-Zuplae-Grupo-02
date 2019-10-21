@@ -83,7 +83,7 @@ def salvar_locacao_db(id_cliente, id_filme, data_locacao):
 
 
 #rotas
-locadora = "LOCADORA HBSIS"
+locadora = "LOCADORA HD"
 app= Flask(__name__)
 @app.route('/')
 def inicio():

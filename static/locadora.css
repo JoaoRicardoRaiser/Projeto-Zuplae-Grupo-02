@@ -17,18 +17,28 @@
 }
 body{
     margin: 0;
-    background: #c5c2c2
+    background-image: url('filmes-super-heroi-2018.jpg');
+    background-attachment: fixed;
+    opacity: 10%; 
+
 }
+/* body a img{
+    opacity: 0.5%; */
+
+
 .menu{
     width: 70em;
     margin: 2em;
+
 }
 .menu ul li{
     background: cornsilk;
     display: inline-block;
     text-transform: uppercase;
     padding: 0.3em 2em;
-}
+} 
+   
+
 .locar{
     width: 80%;
     margin: 0.5em 0 0 7em;
