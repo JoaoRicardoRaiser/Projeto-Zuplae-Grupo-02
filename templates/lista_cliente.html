@@ -9,15 +9,13 @@
             <th>Telefone</th>
             <th>CPF</th>       
         </tr>
-        <div id="linha_clientes">
-          
+            
+        <div id="botao_cadclientes">
+            <a  href="/clientes/cadastro"> <input class="btn btn-secondary" type="submit" value="Cadastrar Cliente"></a>
         </div>
-    
-        <a id="botao_cadclientes" href="/clientes/cadastro"> <input class="btn btn-primary" type="submit" value="Cadastrar Cliente"></a>
-    
-    <tbody>
-        {% for i in lista %}
-        <tr>
+        <tbody>
+            {% for i in lista %}
+            <tr>
             <td>{{i.id}}</td>
             <td>{{i.nome}}</td>
             <td>{{i.telefone}}</td>
@@ -28,7 +26,6 @@
     </tr>
     </thead>
 </table>
-
 
 
 {% endblock %}

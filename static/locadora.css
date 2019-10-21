@@ -8,27 +8,27 @@
     height: 150px;   
 }
 .logo img{
-    width: 150px;
+    width: 300px;
     float: left;
-    margin: -2em -1em   
+    margin: -4em -1em   
 }
 .jumbotron h1{
     margin: -1em
 }
 body{
     margin: 0;
-    background-image: url('filmes-super-heroi-2018.jpg');
-    background-attachment: fixed;
-    opacity: 10%; 
-
+    background-image: url('6e4e0c62059461d9f81d6892a377a1bd.gif');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    opacity: 1;
+    filter: (opacity=20);
+    background-position-y: 1em;
+    width: 100%;
+    height: 100%;
 }
-/* body a img{
-    opacity: 0.5%; */
-
-
 .menu{
     width: 70em;
-    margin: 2em;
+    margin: 2em 0 0 3em;
 
 }
 .menu ul li{
@@ -36,12 +36,14 @@ body{
     display: inline-block;
     text-transform: uppercase;
     padding: 0.3em 2em;
+    border-radius: 5em;
+    margin: 0 0 0 3em;
 } 
    
 
 .locar{
-    width: 80%;
-    margin: 0.5em 0 0 7em;
+    width: 800px;
+    margin: 0.5em 0 0 19em;
 }
 
 .menu li:hover{
@@ -50,32 +52,75 @@ body{
   color: #ffffff;
 }
 #tabela_filmes{
-    width: 80%;
+    width: 79.0%;
     margin: 2em 0 0 9em;
 }
 #botao_cadfilme{
-    margin: 0 0 10em 37em;
-}
-#linha_filmes{
-    background: #dad6d6;
+    margin: 2em 0 2em 68em;
 }
 #tabela_clientes{
     width: 80%;
     margin: 2em 0 0 9em;
 }
-#linha_clientes{
-    background: #dad6d6;
-}
+
 #botao_cadclientes{
-    margin: 0 0 10em 37em;
+    margin: 2em 0 2em 68em;
+    border-radius: 5em;
 }
+
 #tabela_locacoes{
-    width: 80%;
+    width: 78.5%;
     margin: 2em 0 0 9em;
 }
 #botao_cadlocacao{
-    margin: 0 0 10em 37em;
+    margin: 2em 0 2em 68em;
+    
 }
-#linha_locacao{
-    background: #dad6d6; 
+.form-group{
+    margin: 3em 0 2em 0;
+}
+.container button{
+    margin: 0 0 0 1.5em;
+}
+h2{
+    margin: 1em 10em 1em 8em;
+    width: 400px;
+    color: white;
+    text-transform: uppercase;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
+}
+.container{
+    width: 800px;
+    margin: 1em 0 0 15em;
+}
+.container input{
+    border: 1px solid #000000;
+    margin: 0 0 0 1.5em;
+}
+.form-group input{
+    background:  #3b3b3b;
+    color: rgb(255, 255, 255);
+    border: 1px solid #000000;
+}
+.camera_cinema img{
+    width: 100%;
+    height: 77%;
+}
+.gif img{
+    margin: -28.9em 12em;
+    width: 61em;
+    border-radius: 1.17em;
+    height: 27em;
+}
+.dropdown-menu{
+    margin: 1em;
+}
+.custom-select{
+    background: #3b3b3b;
+    margin: 3em 0 0 0;
+    color: #ffffff;
+    border: 1px solid #000000;
+}
+.texto_alugar_filme{
+    margin: 0 0 -2em 0;
 }

@@ -1,19 +1,22 @@
 {% extends "index.html" %}
 {% block index %}
+
+
+
 <body>
 <div class="locar">
-    <h2>Alugar Filme</h2>
+    <div class="texto_alugar_filme">
+        <h2>Alugar Filme</h2>
+    </div>
     <form action="/locacao/salvar" method="POST">
         <select class="custom-select" name="filmes">
-            <option selected>Filmes</option>
-            <div class="dropdown-menu">
+                <option selected>Filmes</option>
+            <div class="dropdown-menu-toggle">
                 {% for i in lista2 %}
                 <option value="{{i.id}}">{{i.titulo}}</option>
                 {% endfor %}
             </div>
         </select>
-
-        <hr>
 
         <select class="custom-select" name="cliente">
             <option selected>Clientes</option>
@@ -23,15 +26,12 @@
                 {% endfor %}
             </div>
         </select>
-        <hr>
 
         <div class="form-group">
             <input type="datetime" class="form-control" placeholder="Data da Locação" name="data_locacao">
         </div>
-        
-        <hr>
 
-        <button type="submit" class="btn btn-primary">Realizar Locação</button>
+        <button type="submit" class="btn btn-secondary">Realizar Locação</button>
 </div>
 </form>
 

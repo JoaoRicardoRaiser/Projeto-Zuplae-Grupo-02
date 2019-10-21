@@ -3,17 +3,18 @@
 
 <table id="tabela_filmes" class="table table-dark table-hover">
     <thead>
-            <tr>
-                <th>ID</th>
-                <th>Titulo</th>
-                <th>Ano</th>
-                <th>Valor</th>
-            </tr>
-            <div id="linha_filmes">
-                
-            </div>
-            <a id="botao_cadfilme" href="/filmes/cadastro"><button type="button" class="btn btn-primary">Cadastrar Filme</button></a>
+        <tr>
+            <th>ID</th>
+            <th>Titulo</th>
+            <th>Ano</th>
+            <th>Valor</th>
+        </tr>
+        <div id="linha_filmes">
 
+        </div>
+        <div id="botao_cadfilme">
+            <a href="/filmes/cadastro"><button type="button" class="btn btn-secondary">Cadastrar Filme</button></a>
+        </div>
     </thead>
     <tbody>
         {% for i in lista %}
