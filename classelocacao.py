@@ -12,7 +12,7 @@ def nome(self):
     return self.__nome
 
 @nome.setter
-def id(self,nome):
+def nome(self,nome):
     self.__nome = nome
 
 
@@ -27,38 +27,38 @@ def valor(self,valor):
 
 
 
-    @property
-    def id(self):
-        return self.__id
+@property
+def id(self):
+    return self.__id
 
-    @id.setter
-    def id(self,id):
-        self.__id = id
+@id.setter
+def id(self,id):
+    self.__id = id
 
-    @property
-    def id_cliente(self):
-        return self.__id_cliente
+@property
+def id_cliente(self):
+    return self.__id_cliente
 
-    @id_cliente.setter
-    def id_cliente(self, id_cliente):
-        self.__id_cliente = id_cliente
+@id_cliente.setter
+def id_cliente(self, id_cliente):
+    self.__id_cliente = id_cliente
 
-    @property
-    def id_filme(self):
-        return self.__id_filme
+@property
+def id_filme(self):
+    return self.__id_filme
 
-    @id_filme.setter
-    def id_filme(self, id_filme):
-        self.__id_filme = id_filme
+@id_filme.setter
+def id_filme(self, id_filme):
+    self.__id_filme = id_filme
 
 
-    @property
-    def data_locacao(self):
-        return self.__data_locacao
+@property
+def data_locacao(self):
+    return self.__data_locacao
 
-    @data_locacao.setter
-    def data_locacao(self,data_locacao):
-        self.__data_locacao = data_locacao
+@data_locacao.setter
+def data_locacao(self,data_locacao):
+    self.__data_locacao = data_locacao
 
 # class  Locacao:
 #     def __init__(self, id, idcliente, idfilme, datalocacao):

@@ -15,12 +15,15 @@
                   
             <a id="botao_cadlocacao" href="/locar/filme"><button type="button" class="btn btn-primary">Alugar Filme</button></a>
     <tbody>
-        {% for i in lista3 %}
+        {% for i in lista %}
         <tr>
             <td>{{i.nome}}</td>
             <td>{{i.id_filme}}</td>
             <td>{{i.valor}}</td>
             <td>{{i.data_locacao}}</td>
+            <td>
+                <a href="/locacoes/delete?id={{i.id}}">Deletar</a>
+            </td>
         {% endfor %}
     </tbody>
 </table>

@@ -22,6 +22,10 @@
             <td>{{i.titulo}}</td>
             <td>{{i.ano}}</td>
             <td>{{i.valor}}</td>
+            <td>
+                <a href="/filmes/delete?id={{i.id}}">Deletar</a>
+                <a href="/filmes/alterar?id={{i.id}}">Alterar</a>
+            </td>
         </tr>
         {% endfor %}
     </tbody>
