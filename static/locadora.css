@@ -124,3 +124,11 @@ h2{
 .texto_alugar_filme{
     margin: 0 0 -2em 0;
 }
+#botao_atualizar{
+    margin: 1em 0 0 0;
+}
+.table_edit_client input{
+    background:#3b3b3b ;
+    color: #ffffff;
+
+}

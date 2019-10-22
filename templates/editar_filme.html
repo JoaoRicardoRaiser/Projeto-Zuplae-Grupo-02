@@ -2,18 +2,25 @@
 
 {% block index %}
 
-    <h1>Filmes Alterar!</h1>
-    <!-- <a href="/filmes/lista">Listagem</a> -->
-    
-    <div class= "formulario">
-        <form action="/filmes/alterar/salvar" method="POST"> 
+<!-- <a href="/filmes/lista">Listagem</a> -->
+<div class="container">
+        <h2>Filmes Alterar</h2>
+    <div class="table_edit_client">
+        <form action="/filmes/alterar/salvar" method="POST">
             <input type="hidden" name="id" value="{{filme.id}}">
-            <input class="input" type="text" placeholder="nome" name="titulo" value="{{filme.titulo}}" > 
-            <input class="input" type="text" placeholder="descrição" name="ano" value="{{filme.ano}}">
-            <input class="input" type="text" placeholder="descrição" name="valor" value="{{filme.valor}}">
-            <input type="submit" value="salvar">        
+            <br>
+            <input type="titulo" class="form-control" id="titulo" placeholder="nome" name="titulo"
+                value="{{filme.titulo}}">
+                <br>
+            <input type="titulo" class="form-control" id="titulo" placeholder="descrição" name="ano"
+                value="{{filme.ano}}">
+                <br>
+            <input type="titulo" class="form-control" id="titulo" placeholder="descrição" name="valor"
+                value="{{filme.valor}}">
+                <br>
+            <input class="btn btn-secondary" type="submit" value="Atualizar">
         </form>
-
     </div>
+</div>
 
 {% endblock %}

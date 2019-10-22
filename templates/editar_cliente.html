@@ -1,19 +1,32 @@
 {% extends "index.html" %}
 
 {% block index %}
-
-    <h1>Clientes Alterar!</h1>
-    <!-- <a href="/filmes/lista">Listagem</a> -->
-    
-    <div class= "formulario">
-        <form action="/clientes/alterar/salvar" method="POST"> 
-            <input type="hidden" name="id" value="{{cliente1.id}}">
-            <input class="input" type="text" placeholder="nome" name="nome" value="{{cliente1.nome}}" > 
-            <input class="input" type="text" placeholder="descrição" name="telefone" value="{{cliente1.telefone}}">
-            <input class="input" type="text" placeholder="descrição" name="cpf" value="{{cliente1.cpf}}">
-            <input type="submit" value="salvar">        
+<!-- <form action="/clientes/salvar" method="POST">
+    <form action="/action_page.php"> -->
+        
+        <div class="container">
+            <h2>Atualizar Cliente</h2>
+            <div class="table_edit_client">
+                <form action="/clientes/alterar/salvar" method="POST">
+                    <input type="hidden" name="id" value="{{cliente1.id}}">
+                    <br>
+                    <input type="nome" class="form-control" id="nome" placeholder="nome" name="nome"
+                        value="{{cliente1.nome}}">
+                    <br>
+                    <input type="nome" class="form-control" id="nome" placeholder="descrição" name="telefone"
+                        value="{{cliente1.telefone}}">
+                    <br>
+                    <input type="nome" class="form-control" id="nome" placeholder="descrição" name="cpf"
+                        value="{{cliente1.cpf}}">
+                    
+                    <div id="botao_atualizar">
+                        <input class="btn btn-secondary" type="submit" value="Atualizar">
+                    </div>
+                </form>
+            </div>
         </form>
-
     </div>
+</form>
+
 
 {% endblock %}
